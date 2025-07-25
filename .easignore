@@ -1,0 +1,16 @@
+# Ignore unnecessary files for EAS Build
+node_modules
+.git
+.expo
+.vscode
+.DS_Store
+*.log
+android/build
+android/app/build
+android/.gradle
+ios/build
+ios/Pods
+ios/DerivedData
+.easignore
+/android
+/ios
