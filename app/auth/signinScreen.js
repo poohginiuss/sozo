@@ -22,9 +22,11 @@ const SigninScreen = () => {
 
     useFocusEffect(
         useCallback(() => {
-            BackHandler.addEventListener("hardwareBackPress", backAction);
+            const subscription = BackHandler.addEventListener("hardwareBackPress", backAction);
+            // BackHandler.addEventListener("hardwareBackPress", backAction);
             return () => {
-                BackHandler.removeEventListener("hardwareBackPress", backAction);
+                subscription.remove();
+                // BackHandler.removeEventListener("hardwareBackPress", backAction);
             };
         }, [backAction])
     );
